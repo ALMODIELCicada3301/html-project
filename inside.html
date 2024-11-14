@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,21 +13,37 @@
             font-family: Arial, sans-serif; 
             margin: 0; 
             padding: 20px; 
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
+
         .container {
             max-width: 800px; 
             margin: auto;
             text-align: center; 
+            border: 2px solid rgb(71, 230, 71);
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1; /* Ensures the container takes up available space */
         }
+
+        h1, h2 {
+            margin: 10px 0;
+            padding: 10px;
+            border-bottom: 2px solid rgb(71, 230, 71);
+        }
+
         img {
             width: 100%; 
             max-width: 400px; 
             height: auto; 
-            margin: 20px 0; 
+            margin: 20px 0;
+            border: 2px solid rgb(71, 230, 71);
+            border-radius: 8px;
+            padding: 5px;
         }
-        h1, h2 {
-            margin: 10px 0; 
-        }
+
         a {
             color: rgb(71, 230, 71);
             text-decoration: none; 
@@ -37,17 +53,46 @@
             border-radius: 5px; 
             transition: background-color 0.3s; 
         }
+
         a:hover {
             background-color: rgba(71, 230, 71, 0.2);
         }
+
         ul, ol {
             text-align: left; 
             margin: 0 auto; 
-            padding: 0; 
+            padding: 10px;
+            border: 2px solid rgb(71, 230, 71);
+            border-radius: 8px;
+            max-width: 500px;
+        }
+        
+        li {
+            padding: 5px 0;
+        }
+
+        hr {
+            border: 1px solid rgb(71, 230, 71);
+            margin: 20px 0;
+        }
+
+        .bottom-center {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: black;
+        }
+
+        .bottom-center a {
+            padding: 5px 20px; /* Adjust padding to make the button narrower */
+            font-size: 16px;   /* Optional: decrease font size */
         }
     </style>
 </head>
 <body>
+
     <div class="container">
         <h1>Self Improvement</h1>
         <hr>
@@ -131,8 +176,11 @@
         <hr>
         <p>Remember, self-improvement is a journey, not a destination. "Set goals, not finish lines; stop looking for the finish line." Seek challenge.</p>
         <img src="man.jpg" alt="Journey Ahead">
-        
+    </div>
+
+    
         <a href="index.html">HOME</a>
     </div>
+    
 </body>
 </html>
