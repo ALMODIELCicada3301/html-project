@@ -6,16 +6,22 @@
 }
 
 body {
-    overflow-y: auto;
+    background-color: #fcfcfc;
+    overflow-x: hidden;
 }
+
 
 .banner {
     width: 100%;
-    min-height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(newbg.jpg);
+    min-height: 100vh; 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('newbg.jpg');
     background-size: cover;
     background-position: center;
-    position: relative;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .navbar {
@@ -23,8 +29,8 @@ body {
     margin: auto;
     padding: 15px 0;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
@@ -32,9 +38,12 @@ body {
     cursor: pointer;
 }
 
-.navbar ul li {
+.navbar ul {
     list-style: none;
-    display: inline-block;
+    display: flex;
+}
+
+.navbar ul li {
     margin: 0 15px;
     position: relative;
 }
@@ -61,17 +70,19 @@ body {
     width: 100%;
 }
 
-.content {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    color: #fff;
-    padding: 20px;
+.navbar ul li a:hover {
+    color: #f00; 
 }
 
-.content h1 {
+.content {
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+    max-width: 800px;
+    line-height: 1.8;
+}
+
+.content h1, .content h2 {
     font-size: 40px;
     margin-bottom: 20px;
 }
@@ -79,7 +90,8 @@ body {
 .content p {
     margin: 15px auto;
     font-weight: 300;
-    line-height: 25px;
+    font-size: 1.1em;
+    line-height: 1.6;
 }
 
 .buttons {
@@ -96,42 +108,42 @@ button.hover-btn {
     text-align: center;
     border-radius: 25px;
     font-weight: bold;
-    border: 2px solid #770404;
-    background: transparent;
+    background: #770404; 
     color: #fff;
+    border: none;
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    transition: 0.3s;
-}
-
-button.hover-btn span {
-    background: #770404;
-    height: 100%;
-    width: 0%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 25px;
-    z-index: -1;
-    transition: 0.5s;
-}
-
-button.hover-btn:hover span {
-    width: 100%;
+    transition: all 0.3s ease-in-out;
 }
 
 button.hover-btn:hover {
-    border: none;
+    background: #f00; 
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.section {
+    padding: 60px 20px;
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    border-top: 2px solid #770404;
+}
+
+.section p {
+    font-size: 1em;
 }
 
 @media (max-width: 768px) {
-    .content h1 {
+    .content h1, .content h2 {
         font-size: 30px;
     }
+
     .content p {
         font-size: 14px;
     }
+
     button.hover-btn {
         width: 180px;
         font-size: 14px;
